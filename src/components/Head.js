@@ -1,24 +1,23 @@
-import { useDispatch } from "react-redux";
+import {useDispatch} from "react-redux"
 import { toggleMenu } from "../utils/appSlice";
 
 
+
 const Head = () => {
+  const dispatch = useDispatch()
 
-  const dispatch = useDispatch();
-
-  const toggleMenuHandler = () => {
-    dispatch(toggleMenu())
+  const toggleMenuHandler = () =>{
+    dispatch( toggleMenu())
   }
 
-
   return (
-    <div className="flex justify-between p-5  shadow ">
+    <div className="flex justify-between p-5   ">
       <div className="flex gap-4 col-span-2">
         <img
           src="https://cdn.iconscout.com/icon/free/png-256/free-hamburger-menu-462145.png?f=webp"
           alt="hamburger"
           className="h-8 cursor-pointer"
-          onClick = {toggleMenuHandler}
+          onClick={toggleMenuHandler}
         />
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/1280px-YouTube_Logo_2017.svg.png"
