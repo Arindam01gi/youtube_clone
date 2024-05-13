@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const VideoCard = ({ info }) => {
   return (
     <div>
-      <Link to="/watch">
+      <Link to={`/watch?v=${info?.id}`}>
       
       <img
         className="rounded-lg w-[400px] h-[250px]"

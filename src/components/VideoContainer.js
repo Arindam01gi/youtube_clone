@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { YOUTUBE_VIDEOS_API } from "./constant";
+import { API_KEY, YOUTUBE_VIDEOS_API } from "./constant";
 import VideoCard from "./VideoCard";
+import { useSelector } from "react-redux";
 
 async function getVideosData() {
+  
+
   return fetch(YOUTUBE_VIDEOS_API, {
     method: "GET",
     headers: {
@@ -12,8 +15,10 @@ async function getVideosData() {
 }
 
 const VideoContainer = () => {
+  const selectedSuggestions = useSelector((store) => store.suggestion)
+  console.log("selectedSuggestions", selectedSuggestions)
 
-  const [videos,setVideos] = useState([])
+  const [videos, setVideos] = useState([])
 
 
   useEffect(() => {
@@ -32,14 +37,14 @@ const VideoContainer = () => {
 
   return (
     <div className=" p-3 flex flex-wrap gap-3">
-      {videos.length >0 ? videos.map((video) => {
+      {videos.length > 0 ? videos.map((video) => {
         return (
-          <VideoCard info={video} />
+          <VideoCard info={video} key={video.id} />
         )
       })
-      
-      : <h1>Video List is Empty</h1>}
-      
+
+        : <h1>Video List is Empty</h1>}
+
     </div>
   );
 };

@@ -12,6 +12,7 @@ import {
 import store from "./utils/store";
 import MainContainer from "./components/MainContainer";
 import Watchpage from "./components/Watchpage";
+import VideoResult from "./components/VideoResult";
 
 const appRouter = createBrowserRouter([{
   path: "/",
@@ -24,6 +25,10 @@ const appRouter = createBrowserRouter([{
     {
       path: "/watch",
       element: <Watchpage />,
+    },
+    {
+      path: "/results",
+      element: <VideoResult />,
     },
   ],
 }]);

@@ -11,7 +11,7 @@ const Sidebar = () => {
 
 
   return  (
-    <div className='p-5 shadow-lg  h-screen  w-48 '>
+    <div className='p-5 shadow-lg  h-screen  w-48 sticky top-10'>
       <h1 className='font-bold border-b border-b-gray-200 pb-3'>Home</h1>
       <h1 className='font-bold pt-3'>Subscriptions</h1>
       <ul className='border-b border-b-gray-200 pb-3'>
