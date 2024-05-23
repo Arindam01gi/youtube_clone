@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { closeMenu } from "../utils/appSlice";
 import { useSearchParams } from "react-router-dom";
 import CommentsConatiner from "./CommentsConatiner";
+import YoutubeCommentsContainer from "./YoutubeCommentsConainer";
 
 const Watchpage = () => {
   const dispatch = useDispatch();
@@ -17,10 +18,10 @@ const Watchpage = () => {
   }, []);
 
   return (
-    <div className="px-5  w-[55%]">
+    <div className="px-4 mx-24  w-[60.5%]">
       <iframe
       className="rounded-lg"
-        width="800"
+        width="890"
         height="500"
         src={`https://www.youtube.com/embed/${id}`}
         title="YouTube video player"
@@ -30,7 +31,8 @@ const Watchpage = () => {
         allowFullScreen
       ></iframe>
 
-      <CommentsConatiner/>
+      {/* <CommentsConatiner/> */}
+      <YoutubeCommentsContainer id={id}/>
     </div>
   );
 };

@@ -16,7 +16,7 @@ async function getVideosData() {
 
 const VideoContainer = () => {
   const selectedSuggestions = useSelector((store) => store.suggestion)
-  console.log("selectedSuggestions", selectedSuggestions)
+  // console.log("selectedSuggestions", selectedSuggestions)
 
   const [videos, setVideos] = useState([])
 
