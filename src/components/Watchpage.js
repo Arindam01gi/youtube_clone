@@ -4,6 +4,7 @@ import { closeMenu } from "../utils/appSlice";
 import { useSearchParams } from "react-router-dom";
 import CommentsConatiner from "./CommentsConatiner";
 import YoutubeCommentsContainer from "./YoutubeCommentsConainer";
+import LiveComments from "./LiveComments";
 
 const Watchpage = () => {
   const dispatch = useDispatch();
@@ -18,7 +19,9 @@ const Watchpage = () => {
   }, []);
 
   return (
-    <div className="px-4 mx-24  w-[60.5%]">
+    <div className="flex">
+
+    <div className="px-4 ml-24  w-[60.5%] ">
       <iframe
       className="rounded-lg"
         width="890"
@@ -33,6 +36,10 @@ const Watchpage = () => {
 
       {/* <CommentsConatiner/> */}
       <YoutubeCommentsContainer id={id}/>
+    </div>
+    
+       <LiveComments/>
+  
     </div>
   );
 };

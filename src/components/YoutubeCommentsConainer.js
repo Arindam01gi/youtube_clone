@@ -74,7 +74,7 @@ const YoutubeCommentsContainer = ({ id }) => {
                     <p className='px-3 py-1 text-gray-600'>
                       <span> <i className='fa-regular fa-thumbs-up'></i> </span>
                       <span>{comment?.snippet?.topLevelComment?.snippet?.likeCount > 1000 ? (comment?.snippet?.topLevelComment?.snippet?.likeCount / 1000) + 'k' : comment?.snippet?.topLevelComment?.snippet?.likeCount}</span>
-                      <span className='mx-2'><i class="fa-regular fa-thumbs-down"></i></span>
+                      <span className='mx-2'><i className="fa-regular fa-thumbs-down"></i></span>
                     </p>
 
                   </div>
