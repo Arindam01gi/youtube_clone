@@ -4,7 +4,7 @@ import searchSlice from "./searchSlice";
 import suggestionSlice from "./suggestionSlice";
 import chatSlice from "./chatSlice";
 
-const store  = configureStore({
+const Store  = configureStore({
     reducer:{
         app:appSlice,
         search:searchSlice,
@@ -13,4 +13,4 @@ const store  = configureStore({
     }
 })
 
-export default store ;
+export default Store ;

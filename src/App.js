@@ -8,7 +8,7 @@ import {
   BrowserRouter as Router,
   RouterProvider,
 } from "react-router-dom";
-import store from './utils/store'
+import Store from './utils/Store'
 import MainContainer from "./components/MainContainer";
 import Watchpage from "./components/Watchpage";
 import SearchResultContainer from "./components/SearchResultContainer";
@@ -16,7 +16,7 @@ import SearchResultContainer from "./components/SearchResultContainer";
 
 const App = () =>{
  return (
-  <Provider store={store}>
+  <Provider store={Store}>
 
   <Router>
      <Routes>
