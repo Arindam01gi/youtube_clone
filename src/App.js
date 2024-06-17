@@ -1,6 +1,5 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Head from "./components/Head";
 import Body from "./components/Body";
 import { Provider } from "react-redux";
 import {
@@ -9,7 +8,7 @@ import {
   BrowserRouter as Router,
   RouterProvider,
 } from "react-router-dom";
-import store from "./utils/store";
+import store from './utils/store'
 import MainContainer from "./components/MainContainer";
 import Watchpage from "./components/Watchpage";
 import SearchResultContainer from "./components/SearchResultContainer";
