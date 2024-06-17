@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { YOUTUBE_SEARCH_API } from "./constant";
 import { cacheResults } from "../utils/searchSlice";
 import { SelectSuggetion } from "../utils/suggestionSlice";
+import { Link, useNavigate } from "react-router-dom";
 
 const Head = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -11,6 +12,8 @@ const Head = () => {
   const [showSuggestions, setShowSuggestions] = useState(false);
   // const [selectSuggetion, setSelectSuggetion] = useState("")
   const searchCache = useSelector((store) => store.search)
+
+  const navigate = useNavigate()
 
   const dispatch = useDispatch();
 
@@ -48,7 +51,7 @@ const Head = () => {
 
 
   const handleSelectSuggestions = (suggestion) => {
-    // console.log("click", suggestion)
+    console.log("click", suggestion)
     dispatch(SelectSuggetion(suggestion));
     setShowSuggestions(false)
   }
@@ -56,6 +59,13 @@ const Head = () => {
   const handleBlur = () => {
     if (!document.activeElement.closest(".suggestion-list")) {
       setShowSuggestions(false);
+    }
+
+  }
+
+  const handleClick = () =>{
+    if (searchQuery) {
+      navigate(`/results?search_query=${searchQuery}`);
     }
   }
 
@@ -84,9 +94,10 @@ const Head = () => {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               onFocus={() => setShowSuggestions(true)}
-              onBlur={() => handleBlur}
+              // onBlur={() => setShowSuggestions(false)}
+              onBlur={handleBlur}
             />
-            <button className="border border-gray-400 px-6 rounded-r-full bg-gray-100">
+            <button className="border border-gray-400 px-6 rounded-r-full bg-gray-100" onClick={handleClick}>
               <i className="fas fa-search text-gray-500 "></i>
             </button>
           </div>
@@ -97,16 +108,18 @@ const Head = () => {
                 {suggestionData
                   ? suggestionData?.map((suggestion, index) => {
                     return (
-                      // <Link to ={`/restults?search_query=${selectSuggetion}`}>
-                      <li
-                        className="font-semibold py-2 hover:bg-gray-100 px-3 cursor-pointer"
-                        key={`${index}-suggestion`}
-                        onClick={() => handleSelectSuggestions(suggestion)}
-                      >
-                        <i className="fas fa-search text-gray-400 mr-3"></i>
-                        {suggestion}
-                      </li>
-                      // </Link>
+                      <Link to={`/results?search_query=${suggestion}`} key={`${index}-suggestion`}>
+                        <li
+                          className="font-semibold py-2 hover:bg-gray-100 px-3 cursor-pointer"
+
+                          onMouseDown={(e) => e.preventDefault()}
+                          onClick={() => handleSelectSuggestions(suggestion)}
+                          onBlur={handleBlur}
+                        >
+                          <i className="fas fa-search text-gray-400 mr-3" ></i>
+                          {suggestion}
+                        </li>
+                      </Link>
                     );
                   })
                   : ""}
