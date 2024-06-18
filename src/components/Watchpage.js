@@ -19,9 +19,9 @@ const Watchpage = () => {
   }, []);
 
   return (
-    <div className="flex">
+    <div className="flex gap-5">
 
-    <div className="px-4 ml-24  w-[60.5%] ">
+    <div className="px-4 ml-12  w-[60.5%]">
       <iframe
       className="rounded-lg"
         width="890"

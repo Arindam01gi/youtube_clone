@@ -9,7 +9,7 @@ const VideoCard = ({ info }) => {
       <Link to={`/watch?v=${info?.id}`}>
 
         <img
-          className="rounded-lg w-[400px] h-[250px]"
+          className="rounded-lg w-[400px] h-[230px] object-cover"
           alt="thumbnail"
           src={info?.snippet?.thumbnails?.standard?.url}
         />

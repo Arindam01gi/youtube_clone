@@ -1,4 +1,4 @@
-export const API_KEY = "AIzaSyCJlzAJplJ_AOdEsSGFFuzUMCh5pn2d8_0";
+export const API_KEY = "AIzaSyC_sNuXAkuXkvJN0-F4mbNaoSK6MxPCwkY";
 export const MAX_RESULTS = 100
 
 export const YOUTUBE_VIDEOS_API =

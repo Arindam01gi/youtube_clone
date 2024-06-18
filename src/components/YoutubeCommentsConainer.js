@@ -38,7 +38,7 @@ const YoutubeCommentsContainer = ({ id }) => {
 
 
   return (
-    <div className='my-5 bg-gray-100 shadow-sm p-2 rounded-lg'>
+    <div className='my-5 bg-gray-100 shadow-sm p-2 rounded-lg '>
       <h1 className="text-2xl font-bold">Comments</h1>
       <div className='mx-3'>
         {comments && comments.length > 0 ? (

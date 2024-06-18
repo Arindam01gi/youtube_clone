@@ -30,14 +30,15 @@ const VideoContainer = () => {
       const resp = await getVideosData();
       // console.log(resp);
       setVideos(resp.items)
+      // console.log('videos',videos)
     } catch (err) {
       console.log(err);
     }
   };
 
   return (
-    <div className=" p-3 flex flex-wrap gap-3">
-      {videos.length > 0 ? videos.map((video) => {
+    <div className=" p-3 flex flex-wrap gap-5">
+      { videos && videos.length > 0 ? videos.map((video) => {
         return (
           <VideoCard info={video} key={video.id} />
         )

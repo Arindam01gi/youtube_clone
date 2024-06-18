@@ -6,18 +6,18 @@ import Head from './Head'
 
 const Body = () => {
   return (
-    <>
     <div>
+    {/* <div> */}
 
       <Head/>
-      </div>
+      {/* </div> */}
     <div className='grid grid-flow-col'>
       
       <Sidebar/>
       {/* <MainContainer/> */}
       <Outlet/>
     </div>
-    </>
+    </div>
   )
 }
 
