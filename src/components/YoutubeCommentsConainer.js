@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { API_KEY, MAX_RESULTS } from './constant';
+import { timeAgo } from '../Helper/TimeCalculation';
 
 
 async function getCommentsData(id) {
@@ -53,7 +54,7 @@ const YoutubeCommentsContainer = ({ id }) => {
                   // onError={(e) => { e.target.src = 'path_to_placeholder_image'; }}
                   />
                   <div>
-                    <p className='px-3 text-xs text-gray-400'><span className='text-sm font-bold text-black mr-3'>{comment?.snippet?.topLevelComment?.snippet?.authorDisplayName}</span> {comment?.snippet?.topLevelComment?.snippet?.publishedAt}</p>
+                    <p className='px-3 text-xs text-gray-400'><span className='text-sm font-bold text-black mr-3'>{comment?.snippet?.topLevelComment?.snippet?.authorDisplayName}</span> {timeAgo(comment?.snippet?.topLevelComment?.snippet?.publishedAt)}</p>
                     <p className='text-sm px-3 py-1'>
                       {comment?.snippet?.topLevelComment?.snippet?.textOriginal.split('\n').map((line, index) => (
                         <React.Fragment key={index}>
