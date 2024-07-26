@@ -37,7 +37,7 @@ const VideoContainer = () => {
   };
 
   return (
-    <div className=" p-3 flex flex-wrap gap-5">
+    <div className=" p-3 flex flex-wrap gap-5 overflow-x-hidden">
       { videos && videos.length > 0 ? videos.map((video) => {
         return (
           <VideoCard info={video} key={video.id} />

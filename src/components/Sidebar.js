@@ -11,7 +11,7 @@ const Sidebar = () => {
   if (!isMenuOpen) return null;
 
   const handleClick = (name) =>{
-    console.log("name",name)
+    // console.log("name",name)
     setSelected(name)
   }
 
@@ -19,7 +19,7 @@ const Sidebar = () => {
 
 
   return (
-    <div className='px-5 shadow-lg  h-screen  w-48 sticky top-10 '>
+    <div className='px-5 shadow-lg  h-screen  w-48 top-10 sticky'>
       <Link to  = '/'>
       <h1 className={`p-3 mb-1  ${selected === 'Home'? 'bg-gray-200  rounded-md':''}`} onClick={() =>handleClick("Home")}>
         <i className='fas fa-house mr-4'></i>

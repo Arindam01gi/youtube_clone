@@ -43,24 +43,20 @@ const SearchResultContainer = () => {
         <div className='p-3'>
             {serachResult.length > 0 ? serachResult.map((result, index) => (
                 <Link to={`/watch?v=${result?.id?.videoId}`} key={result?.id?.videoId}>
-                    <div className='flex my-3 p-3'>
-
-
-                        <div className='w-[500px]'>
+                    <div className='md:flex my-3 p-3'>
+                        <div className='md:w-[500px] w-[300px]'>
                             <img
                                 src={result?.snippet?.thumbnails?.high?.url}
                                 alt='thumbnail'
                                 className='w-full h-[250px] rounded-lg object-cover hover:rounded-none'
                             />
                         </div>
-                        <div className='mx-3 flex-1'>
+                        <div className='mx-3 flex-1 mt-4 md:mt-0'>
                             <h1 className='font-semibold font-sans text-xl'>{result?.snippet?.title}</h1>
                             <p className='text-gray-500 text-sm font-semibold mt-2'>{timeAgo(result?.snippet?.publishTime)}</p>
                             <p className='text-gray-500 text-sm font-semibold mt-2'>{result?.snippet?.channelTitle}</p>
                             <p className='text-gray-500 text-xs font-semibold mt-2'>{result?.snippet?.description}</p>
                         </div>
-
-
                     </div>
                 </Link>
             )) : (
