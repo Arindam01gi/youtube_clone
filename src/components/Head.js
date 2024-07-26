@@ -72,7 +72,7 @@ const Head = () => {
   return (
     <div className="sticky top-0 z-10 bg-white ">
       <div className="flex justify-between p-5" >
-        <div className="flex gap-4 col-span-2">
+        <div className="flex gap-4 col-span-2 items-center">
           <img
             src="https://cdn.iconscout.com/icon/free/png-256/free-hamburger-menu-462145.png?f=webp"
             alt="hamburger"
@@ -82,14 +82,14 @@ const Head = () => {
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/1280px-YouTube_Logo_2017.svg.png"
             alt="logo"
-            className="h-8 "
+            className="h-4 md:h-8"
           />
         </div>
         <div className="w-1/2">
           <div className="  flex justify-start ">
             <input
               type="text"
-              className="w-2/3 border border-gray-400 py-2 rounded-l-full px-4"
+              className="w-2/3 border border-gray-400 py-2 rounded-l-full px-2 md:px-4"
               placeholder="search"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}

@@ -19,7 +19,7 @@ const Sidebar = () => {
 
 
   return (
-    <div className='px-5 shadow-lg  h-screen  w-48 top-10 sticky'>
+    <div className='px-5 shadow-lg  h-screen  w-48 top-10 md:sticky fixed bg-white z-20 md:z-0 mt-10 md:mt-0'>
       <Link to  = '/'>
       <h1 className={`p-3 mb-1  ${selected === 'Home'? 'bg-gray-200  rounded-md':''}`} onClick={() =>handleClick("Home")}>
         <i className='fas fa-house mr-4'></i>
