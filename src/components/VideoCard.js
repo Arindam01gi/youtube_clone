@@ -9,11 +9,11 @@ const VideoCard = ({ info }) => {
       <Link to={`/watch?v=${info?.id}`}>
 
         <img
-          className="rounded-lg w-[400px] h-[230px] object-cover"
+          className="rounded-lg md:w-[400px] w-full h-[230px] object-cover"
           alt="thumbnail"
           src={info?.snippet?.thumbnails?.standard?.url}
         />
-        <div className="w-[400px]">
+        <div className="md:w-[400px] w-full">
           <p className="mt-2 font-bold">{info?.snippet?.title}</p>
           <ul className="text-gray-500">
             <li>{info?.snippet?.channelTitle}</li>
