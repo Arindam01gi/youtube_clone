@@ -1,8 +1,8 @@
-export const API_KEY = "AIzaSyC_sNuXAkuXkvJN0-F4mbNaoSK6MxPCwkY";
+export const API_KEY = "AIzaSyBRSPL1DHnZvYHrjgK-HCmRb1ozYMXMwcA";
 export const MAX_RESULTS = 100
 
 export const YOUTUBE_VIDEOS_API =
-  `https://youtube.googleapis.com/youtube/v3/videos?part=snippet,localizations,statistics,contentDetails,liveStreamingDetails&maxResults=${MAX_RESULTS}&regionCode=IN&chart=mostPopular&key= ` +
+  `https://youtube.googleapis.com/youtube/v3/videos?part=snippet,localizations,statistics,contentDetails,liveStreamingDetails&maxResults=${MAX_RESULTS}&regionCode=IN&chart=mostPopular&key=` +
   API_KEY;
 
 export const YOUTUBE_SEARCH_API =
