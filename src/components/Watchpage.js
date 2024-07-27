@@ -19,13 +19,13 @@ const Watchpage = () => {
   }, []);
 
   return (
-    <div className="flex gap-5">
+    <div className="flex md:gap-5 overflow-x-hidden">
 
-    <div className="px-4 ml-12  w-[60.5%]">
+    <div className="px-4 md:ml-12  ml-0  md:w-[60.5%] w-full">
       <iframe
-      className="rounded-lg"
-        width="890"
-        height="500"
+      className="rounded-lg md:w-[890px] md:h-[500px] h-[270px] w-full"
+        // width="890"
+        // height="500"
         src={`https://www.youtube.com/embed/${id}`}
         title="YouTube video player"
         frameBorder="0"

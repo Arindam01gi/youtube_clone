@@ -26,7 +26,7 @@ const LiveComments = () => {
 
 
   return (
-    <div>
+    <div className='md:block hidden'>
       <div className="w-full h-[460px] border border-slate-400 mx-3 rounded-top shadow-sm overflow-y-scroll ">
         <p className='p-4'> Top Chat</p>
         <hr className='' />

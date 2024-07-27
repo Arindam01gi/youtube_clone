@@ -44,7 +44,7 @@ const SearchResultContainer = () => {
             {serachResult.length > 0 ? serachResult.map((result, index) => (
                 <Link to={`/watch?v=${result?.id?.videoId}`} key={result?.id?.videoId}>
                     <div className='md:flex my-3 p-3'>
-                        <div className='md:w-[500px] w-[300px]'>
+                        <div className='md:w-[500px] w-full'>
                             <img
                                 src={result?.snippet?.thumbnails?.high?.url}
                                 alt='thumbnail'
